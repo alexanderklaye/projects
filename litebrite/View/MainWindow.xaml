@@ -1,0 +1,68 @@
+﻿<Window x:Class="Project3_LiteBrite.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prop="clr-namespace:Project3_LiteBrite.Properties"
+        xmlns:helpers="clr-namespace:Project3_LiteBrite.Helpers"
+        xmlns:menu="clr-namespace:Project3_LiteBrite.View"
+        mc:Ignorable="d"
+        Title="{x:Static prop:Resources.progTitle}"
+        Icon="./../tree.jpg"
+        Height="600" Width="800"
+        MinHeight="600" MinWidth="800"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Helpers/ShapeResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <helpers:ColourConverter x:Key="colorConverter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <DockPanel>
+        <menu:LiteBriteMenu DockPanel.Dock="Top"/>
+        <Border>
+            <DockPanel DockPanel.Dock="Left">
+                <ListBox ItemsSource="{Binding colorChoice}" MouseMove="Colour_MouseMove">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Rectangle Width="200" Height="50" Grid.Column="0">
+                                    <Rectangle.Fill>
+                                        <SolidColorBrush Color="{Binding ElementName=lblColours, Path=Content, Converter={StaticResource colorConverter}}"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Label x:Name="lblColours" Content="{Binding}" FontSize="20" Grid.Column="0" Foreground="BlanchedAlmond"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+        </Border>
+
+        <Grid x:Name="gridShapes" DockPanel.Dock="Right" Background="Transparent">
+            <ItemsControl ItemsSource="{Binding allShapes}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="50" Columns="50" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Rectangle DragEnter="Colour_DragEnter" Drop="Colour_Drop" AllowDrop="True" Grid.Row="{Binding Row}" Grid.Column="{Binding Column}">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="{Binding Colour, Converter={StaticResource colorConverter}}"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </DockPanel>
+</Window>

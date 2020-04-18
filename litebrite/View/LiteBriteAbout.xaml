@@ -1,0 +1,29 @@
+﻿<Window x:Class="Project3_LiteBrite.View.LiteBriteAbout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project3_LiteBrite.View"
+        xmlns:prop="clr-namespace:Project3_LiteBrite.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static prop:Resources.progTitle}"
+        Icon="./../tree.jpg"
+        Height="150" Width="400" MaxHeight="150" MaxWidth="400" WindowStartupLocation="CenterScreen">
+    <StackPanel Background="CadetBlue">
+        <TextBlock TextWrapping="WrapWithOverflow" 
+                   FontWeight="DemiBold"
+                   Text="{x:Static prop:Resources.aboutInfo}" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,30,0,0"
+                   />
+        <TextBlock TextWrapping="WrapWithOverflow" 
+                   FontWeight="DemiBold"
+                   Text="Alex Laye" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   Margin="0"
+                   />
+        
+    </StackPanel>
+</Window>

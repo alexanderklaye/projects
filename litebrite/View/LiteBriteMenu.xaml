@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Project3_LiteBrite.View.LiteBriteMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project3_LiteBrite.View"
+             xmlns:prop="clr-namespace:Project3_LiteBrite.Properties"
+             >
+    <Menu >
+        <MenuItem Header="{x:Static prop:Resources.menuFile}">
+            <MenuItem Header="{x:Static prop:Resources.menuOpen}" Command="{Binding commandOpen}"/>
+            <MenuItem Header="{x:Static prop:Resources.menuSave}" Command="{Binding commandSave}"/>
+            <Separator/>
+            <MenuItem Header="{x:Static prop:Resources.menuExit}" Command="{Binding commandExit}"/>
+        </MenuItem>
+        <MenuItem Header="{x:Static prop:Resources.menuGame}">
+            <MenuItem Header="{x:Static prop:Resources.menuNew}" Command="{Binding commandNewBoard}"/>
+            <Separator/>
+            <MenuItem Header="{x:Static prop:Resources.menuRandom}" Command="{Binding commandRandomize}"/>
+        </MenuItem>
+        <MenuItem Header="{x:Static prop:Resources.menuHelp}">
+            <MenuItem Header="{x:Static prop:Resources.menuAbout}" Command="{Binding commandAbout}"/>
+        </MenuItem>
+    </Menu>
+</UserControl>
