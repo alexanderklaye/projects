@@ -1,0 +1,1 @@
+This C++ program was designed to show knowledge of creating static libraries, implementing Facade design patterns,and knowledge of manipulating elements of the command line console such as altering cell background colour, foreground colour, mouse listeners, and key listeners.. Colours can be cycled through with the right mouse button (Red, Blue, and Green).
