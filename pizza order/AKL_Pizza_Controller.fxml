@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Program Name: AKL_Pizza_Controller.fxml -->
+<!-- Purpose: to import GUI elements into AKL_Pizza_Main.java -->
+<!-- Coder: Alex Laye, sec02 -->
+<!-- Date: Aug 22, 2018 -->
+
+<?import javafx.application.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.stage.*?>
+<?import javafx.event.*?>
+<?import java.net.*?>
+
+<!-- Basis for the root pane in main program -->
+<BorderPane fx:controller="AKL_Pizza_Controller" xmlns:fx="http://javafx.com/fxml/1" styleClass="root">
+	<!-- Top of BorderPane -->
+	<top>
+		<GridPane fx:id="title_grid" alignment="center" hgap="10" vgap="30">
+			<Label>Fanshawe Perfect Pizza Online Order System</Label>
+		</GridPane>
+	</top>
+	<!-- Center of BorderPane -->
+	<center>
+		<!-- toggle groups for radio buttons -->
+		<fx:define>  
+        	<ToggleGroup fx:id="grpSize"/>
+        	<ToggleGroup fx:id="grpCrust"/>
+    	</fx:define>
+		<GridPane  fx:id="midGrid" alignment="center_left" hgap="10" vgap="30">
+			<!-- Labels and fields for user input -->
+			<Label GridPane.columnIndex="0" GridPane.rowIndex="0">Name</Label>
+			<TextField fx:id="fldName" GridPane.columnIndex="1" GridPane.rowIndex="0"></TextField>
+
+			<Label GridPane.columnIndex="0" GridPane.rowIndex="1">Address</Label>
+			<TextField fx:id="fldAddress" GridPane.columnIndex="1" GridPane.rowIndex="1"></TextField>
+			
+			<Label GridPane.columnIndex="0" GridPane.rowIndex="2">Phone</Label>
+			<TextField fx:id="fldPhone" GridPane.columnIndex="1" GridPane.rowIndex="2"></TextField>
+
+			<!-- VBox for size options -->
+			<VBox GridPane.columnIndex="0" GridPane.rowIndex="4">
+				<Label>Size</Label>
+				<RadioButton fx:id="rbSmall" selected="false" toggleGroup="$grpSize">Small</RadioButton>
+				<RadioButton fx:id="rbMedium" selected="true" toggleGroup="$grpSize">Medium</RadioButton>
+				<RadioButton fx:id="rbLarge" selected="false" toggleGroup="$grpSize">Large</RadioButton>
+				<RadioButton fx:id="rbELarge" selected="false" toggleGroup="$grpSize">Extra Large</RadioButton>
+			</VBox>
+			<!-- VBox for crust options -->
+			<VBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+				<Label>Crust</Label>
+				<RadioButton fx:id="rbThin" selected="false" toggleGroup="$grpCrust">Thin</RadioButton>
+				<RadioButton fx:id="rbRegular" selected="true" toggleGroup="$grpCrust">Regular</RadioButton>
+				<RadioButton fx:id="rbThick" selected="false" toggleGroup="$grpCrust">Thick</RadioButton>
+			</VBox>
+			<!-- GridPane for toppings -> may make it 2 VBoxes -->
+			<GridPane alignment="center" hgap="20" vgap="5" GridPane.columnIndex="2" GridPane.rowIndex="4">
+				<CheckBox fx:id="cbPepperoni" GridPane.columnIndex="0" GridPane.rowIndex="0">Pepperoni</CheckBox>
+				<CheckBox fx:id="cbSausage" GridPane.columnIndex="0" GridPane.rowIndex="1">Sausage</CheckBox>
+				<CheckBox fx:id="cbGreenPepper" GridPane.columnIndex="0" GridPane.rowIndex="2">Green Peppers</CheckBox>
+				<CheckBox fx:id="cbOlives" GridPane.columnIndex="0" GridPane.rowIndex="3">Olives</CheckBox>
+				<CheckBox fx:id="cbMushrooms" GridPane.columnIndex="1" GridPane.rowIndex="0">Mushrooms</CheckBox>
+				<CheckBox fx:id="cbTomatoes" GridPane.columnIndex="1" GridPane.rowIndex="1">Tomatoes</CheckBox>
+				<CheckBox fx:id="cbAnchovies" GridPane.columnIndex="1" GridPane.rowIndex="2">Anchovies</CheckBox>
+				<CheckBox fx:id="cbOnions" GridPane.columnIndex="1" GridPane.rowIndex="3">Onions</CheckBox>
+			</GridPane>
+
+		</GridPane>
+	</center>
+	
+	<!-- Bottom of BorderPane -->
+	<bottom>
+		<!-- pane and HBox for button alignment -->
+		<GridPane alignment="center_right" hgap="5" vgap="15">
+			<HBox>
+				<Button fx:id="btnOkay">Okay!!</Button>
+				<Button fx:id="btnCancel">Cancel</Button>
+			</HBox>
+		</GridPane>
+	</bottom>
+	
+	<!-- sets the stylesheet for the program -->
+	<stylesheets>
+    	<URL value="@AKL_Pizza_Controller.css" />  
+  	</stylesheets>
+</BorderPane>

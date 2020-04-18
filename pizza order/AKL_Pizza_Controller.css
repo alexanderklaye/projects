@@ -1,0 +1,61 @@
+/**
+ * Program Name: AKL_Pizza_Controller.css
+ *	Purpose: This is the stylesheet used for the AKL_Pizza_Controller.fxml
+				and AKL_Pizza_Main.java program *						
+ *	Coder: Trin Han, modified by Alex Laye sec02
+ *	Date: Aug 22, 2018
+ */
+
+.label {
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.button{
+	-fx-font-size: 13px;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.text {
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.text-field {
+	-fx-font-size: 13px;
+	-fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#midGrid{ 
+	-fx-background-color: linear-gradient(#FFFF00, #FF0000);
+	-fx-font-size: 13px;
+	-fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-fill: linear-gradient(#990000, #009999);
+}
+
+#user_input{
+	-fx-font-size: 13px;
+	-fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#title_grid{
+	-fx-background-color: beige;
+	-fx-font-size: 20px;
+	-fx-font-family: "Arial Black";
+    -fx-font-weight: bold;
+    -fx-fill: red;
+}
