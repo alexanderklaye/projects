@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".LocationItem"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        >
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="2dp"
+            android:src="@mipmap/ic_launcher_round"
+
+            />
+        <TextView
+            android:id="@+id/txtLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:text="@string/location_placeholder"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/imgLocation"
+
+            />
+        <TextView
+            android:id="@+id/txtLatLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtLocationName"
+            android:text="@string/latlong_placeholder"
+            android:layout_toEndOf="@id/imgLocation"
+            android:textSize="15sp"
+            />
+        <ImageView
+            android:id="@+id/imgDeleteLocation"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/ic_delete_forever_black_24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            />
+        <ImageView
+            android:id="@+id/imgWishLocation"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/ic_card_giftcard_black_24dp"
+            android:layout_toLeftOf="@id/imgVisitedLocation"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="false"
+            android:visibility="visible"
+            />
+        <ImageView
+            android:id="@+id/imgVisitedLocation"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/ic_check_black_24dp"
+            android:layout_toLeftOf="@id/imgDeleteLocation"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="false"
+            android:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

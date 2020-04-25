@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Project_0_V1</string>
+    <string name="location_placeholder">Location name</string>
+    <string name="latlong_placeholder">LatLong Here</string>
+    <string name="btnClear">Clear All</string>
+    <string name="btnAbout">About</string>
+    <string name="btnNewLocation">Add New Location</string>
+    <string name="btnBack">Back</string>
+    <string name="txtAbout">Program Made By Alex Laye (&#169;)2019</string>
+</resources>
