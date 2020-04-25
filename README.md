@@ -1,3 +1,3 @@
 # projects
 
-A random assortment of projects I'm working on
+A random assortment of projects I've worked on
